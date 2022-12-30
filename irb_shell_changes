@@ -1,0 +1,31 @@
+IRB Shell 1
+
+class Apple
+
+  attr_reader :variety, :origin, :history
+  def initialize(**args)
+    @variety = args[:variety]
+    @origin = args[:origin]
+    @history = args[:history]
+  end
+end
+
+apple = Apple.new(variety: 'Honeycrisp', origin: 'Minnesota', history: 'Introduction to Market: 1991')
+
+str = Marshal.dump(apple)
+#copy str
+
+IRB Shell 2
+
+class Apple
+
+  attr_reader :variety, :origin, :history
+  def initialize(**args)
+    @variety = args[:variety]
+    @origin = args[:origin]
+    @history = args[:history]
+  end
+end
+
+str1 = #paste the copied string
+obj = Marshal.load(str1)
